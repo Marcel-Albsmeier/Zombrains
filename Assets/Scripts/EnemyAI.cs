@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class EnemyAI : MonoBehaviour{
     //parameters
@@ -33,7 +34,6 @@ public class EnemyAI : MonoBehaviour{
         } else if (distanceToTarget <= chaseRange) {
             isProvoked = true;  
         }
-        
     }
 
     private void CalmDown() {
