@@ -889,11 +889,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1c072de85358def45afeebd339a65bad, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 622a87b3379022740be7e2efea3ebd33, type: 3}
---- !u!20 &458012375 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-  m_PrefabInstance: {fileID: 653327201}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &494871074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1186,30 +1181,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1262585516898198805, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: fpCamera
-      value: 
-      objectReference: {fileID: 458012375}
-    - target: {fileID: 1262585516898198805, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: shootWeapon.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1262585516898198805, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: shootWeapon.m_SingletonActionBindings.Array.data[1].m_Id
-      value: a7f8efa5-c965-4b9e-8945-aea194df9f00
-      objectReference: {fileID: 0}
-    - target: {fileID: 1262585516898198805, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: shootWeapon.m_SingletonActionBindings.Array.data[1].m_Path
-      value: <Keyboard>/a
-      objectReference: {fileID: 0}
-    - target: {fileID: 1262585516898198805, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: shootWeapon.m_SingletonActionBindings.Array.data[1].m_Action
-      value: Shoot Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 1262585516898198805, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: shootWeapon.m_SingletonActionBindings.Array.data[0].m_Interactions
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
