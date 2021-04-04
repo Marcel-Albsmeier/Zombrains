@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour{
     //parameters
     [SerializeField] InputAction shootWeapon;
     [SerializeField] Camera fpCamera;
+    [SerializeField] float weaponDamage = 35f;
     [SerializeField] float weaponRange = 100f;
 
     private void Awake() {
@@ -27,9 +28,19 @@ public class Weapon : MonoBehaviour{
 
     private void Shoot() {
         RaycastHit hit;
-        Physics.Raycast(fpCamera.transform.position, fpCamera.transform.forward, out hit, weaponRange);
-        if (hit.transform != null) {
+
+        if (Physics.Raycast(fpCamera.transform.position, fpCamera.transform.forward, out hit, weaponRange)) {
             Debug.Log($"I hit {hit.transform.name}");
+            //TODO: Add hit effect visual to help player notice hits
+
+            EnemyHealth targetHealth = hit.transform.GetComponent<EnemyHealth>();
+
+            if (targetHealth) {
+                targetHealth.TakeDamage(weaponDamage);
+            }
+            
+        } else {
+            return;
         }
         
     }
