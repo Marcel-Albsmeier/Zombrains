@@ -12,6 +12,7 @@ public class Weapon : MonoBehaviour{
     [SerializeField] float weaponDamage = 35f;
     [SerializeField] float weaponRange = 100f;
     [SerializeField] ParticleSystem muzzleFlash;
+    [SerializeField] GameObject hitVFX;
 
     private void Awake() {
         shootWeapon.Enable();
@@ -40,7 +41,10 @@ public class Weapon : MonoBehaviour{
     private void ProcessRaycast() {
         RaycastHit hit;
 
+        
+
         if (Physics.Raycast(fpCamera.transform.position, fpCamera.transform.forward, out hit, weaponRange)) {
+            CreateHitImpactVFX(hit);
             Debug.Log($"I hit {hit.transform.name}");
             //TODO: Add hit effect visual to help player notice hits
 
@@ -53,5 +57,10 @@ public class Weapon : MonoBehaviour{
         } else {
             return;
         }
+    }
+
+    private void CreateHitImpactVFX(RaycastHit hit) {
+        var impact = Instantiate(hitVFX, hit.point, Quaternion.LookRotation(hit.normal));
+        Destroy(impact, 0.1f);
     }
 }
