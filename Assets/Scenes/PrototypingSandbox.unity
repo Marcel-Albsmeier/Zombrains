@@ -1182,10 +1182,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1262585516898198805, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: muzzleFlash
-      value: 
-      objectReference: {fileID: 950600743}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
 --- !u!1 &665947136 stripped
@@ -1801,11 +1797,6 @@ CanvasRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5862bbfe91a75054ca72c13b555b6ac5, type: 3}
   m_PrefabInstance: {fileID: 2039292998}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &950600743 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8913857437366172630, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-  m_PrefabInstance: {fileID: 653327201}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &997136113
 PrefabInstance:
@@ -3370,10 +3361,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1851505651059757640, guid: 2c648e3ce3440d34b89ad7fcb6235eb2, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1622607879}
     - target: {fileID: 1851505651059757641, guid: 2c648e3ce3440d34b89ad7fcb6235eb2, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -3422,6 +3409,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5348756955775627715, guid: 2c648e3ce3440d34b89ad7fcb6235eb2, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1622607879}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c648e3ce3440d34b89ad7fcb6235eb2, type: 3}
 --- !u!1001 &9193311313465247517

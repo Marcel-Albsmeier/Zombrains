@@ -11,10 +11,15 @@ public class EnemyAI : MonoBehaviour{
     [SerializeField] float chaseRange = 5;
     [SerializeField] float timeUntilCalm = 5;
 
+    const string CHASE_TRIGGER = "move";
+    const string IDLE_TRIGGER = "idle";
+    const string ATTACK_STATE = "attack";
+
 
     //cached
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
+    Animator animator;
 
     //states
     bool isProvoked = false;
@@ -22,6 +27,11 @@ public class EnemyAI : MonoBehaviour{
 
     private void Awake() {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
+    }
+
+    private void Start() {
+        target = FindObjectOfType<CharacterController>().transform;
     }
 
     private void Update() {
@@ -39,13 +49,15 @@ public class EnemyAI : MonoBehaviour{
     private void CalmDown() {
         if (distanceToTarget > chaseRange) {
             playerGoneTimer += Time.deltaTime;
-            Debug.Log($"{name} hasn't seen {target.name} in {playerGoneTimer} seconds");
+            //Debug.Log($"{name} hasn't seen {target.name} in {playerGoneTimer} seconds");
         } else {
             playerGoneTimer = 0;
         }
 
         if (playerGoneTimer >= timeUntilCalm) {
             isProvoked = false;
+            navMeshAgent.SetDestination(transform.position);
+            animator.SetTrigger(IDLE_TRIGGER);
             Debug.Log($"{name} has calmed down and stopped chasing");
         }
     }
@@ -57,15 +69,18 @@ public class EnemyAI : MonoBehaviour{
         }
 
         if (distanceToTarget <= navMeshAgent.stoppingDistance) {
+           
             Attack();
         }
     }
 
     private void Attack() {
-        Debug.Log($"{name} just hit, and is currently tearing appart {target.name}");
+        animator.SetBool(ATTACK_STATE, true);
     }
 
     private void ChaseTarget() {
+        animator.SetBool(ATTACK_STATE, false);
+        animator.SetTrigger(CHASE_TRIGGER);
         navMeshAgent.SetDestination(target.position);
     }
 
