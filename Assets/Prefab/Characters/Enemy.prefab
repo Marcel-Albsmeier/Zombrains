@@ -129,7 +129,7 @@ Transform:
   m_GameObject: {fileID: 1851505651059757641}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.9, y: 1.65, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4851340147888643778}
   - {fileID: 701566936543256634}
@@ -236,6 +236,7 @@ MonoBehaviour:
   target: {fileID: 0}
   chaseRange: 10
   timeUntilCalm: 5
+  turnSpeed: 5
 --- !u!114 &7069733855924720388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d5c15552f02314799845b5c27e5806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   damage: 40
 --- !u!1 &3022646097941418986
 GameObject:
