@@ -8,8 +8,9 @@ using Random = UnityEngine.Random;
 public class EnemyAI : MonoBehaviour{
     //parameters
     [SerializeField] Transform target;
-    [SerializeField] float chaseRange = 5;
-    [SerializeField] float timeUntilCalm = 5;
+    [SerializeField] float chaseRange = 5f;
+    [SerializeField] float timeUntilCalm = 5f;
+    [SerializeField] float turnSpeed = 5f;
 
     const string CHASE_TRIGGER = "move";
     const string IDLE_TRIGGER = "idle";
@@ -63,6 +64,7 @@ public class EnemyAI : MonoBehaviour{
     }
 
     private void EngageTarget() {
+        FaceTarget();
         if (distanceToTarget >= navMeshAgent.stoppingDistance) {
             ChaseTarget();
 
@@ -82,6 +84,12 @@ public class EnemyAI : MonoBehaviour{
         animator.SetBool(ATTACK_STATE, false);
         animator.SetTrigger(CHASE_TRIGGER);
         navMeshAgent.SetDestination(target.position);
+    }
+
+    private void FaceTarget() {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
     }
 
     private void OnDrawGizmosSelected() {
