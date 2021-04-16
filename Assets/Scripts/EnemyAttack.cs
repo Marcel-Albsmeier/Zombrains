@@ -4,16 +4,29 @@ using UnityEngine;
 
 [RequireComponent(typeof(EnemyAI))]
 public class EnemyAttack : MonoBehaviour{
-    [SerializeField] Transform target;
+
+    //parameters
     [SerializeField] float damage = 40f;
+
+    //cached
+    PlayerHealth target;
+
+    private void Start() {
+        target = FindObjectOfType<PlayerHealth>();
+    }
+
 
 
     public bool AttackHitEvent() {
         if (!target) {
             return false;
         }
+        var tempTargetHealth = target;
+        if (!tempTargetHealth) {
+            return false;
+        }
+        tempTargetHealth.TakeDamage(damage);
 
-        Debug.Log("Bang bang");
         return true;
     
     }
