@@ -587,7 +587,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Respawn
+  m_text: Again!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0bb2d633f4b583b4abaf6fba747bb3fe, type: 2}
   m_sharedMaterial: {fileID: -8000497581836339241, guid: 0bb2d633f4b583b4abaf6fba747bb3fe, type: 2}
@@ -614,7 +614,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34.1
+  m_fontSize: 40.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 252261785}
   - component: {fileID: 252261784}
   m_Layer: 5
-  m_Name: RespawnButton
+  m_Name: AgainButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4289,6 +4289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5508406188455494646, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
+      propertyPath: gameOverCanvas
+      value: 
+      objectReference: {fileID: 724787381}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
 --- !u!1001 &9193311313465247517
