@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  chaseRange: 10
+  chaseRange: 15
   timeUntilCalm: 5
   turnSpeed: 5
 --- !u!114 &7069733855924720388
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866b66577b78e4645a1ee70fb0265cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 100
+  hitPoints: 200
 --- !u!95 &5648172367087281853
 Animator:
   serializedVersion: 3

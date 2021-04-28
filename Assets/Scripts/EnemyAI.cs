@@ -76,6 +76,12 @@ public class EnemyAI : MonoBehaviour{
         }
     }
 
+    public void OnDamageTaken() {
+        isProvoked = true;
+        playerGoneTimer = 0f ;
+    }
+
+
     private void Attack() {
         animator.SetBool(ATTACK_STATE, true);
     }
