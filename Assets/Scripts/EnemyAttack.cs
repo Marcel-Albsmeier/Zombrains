@@ -31,9 +31,5 @@ public class EnemyAttack : MonoBehaviour{
     
     }
 
-    public void OnDamageTaken() {
-        Debug.Log("test");
-    }
-
 
 }

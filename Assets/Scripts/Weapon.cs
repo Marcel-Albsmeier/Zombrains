@@ -45,12 +45,13 @@ public class Weapon : MonoBehaviour{
 
         if (Physics.Raycast((fpCamera.transform.position + (fpCamera.transform.forward/2)), fpCamera.transform.forward, out hit, weaponRange)) {
             CreateHitImpactVFX(hit);
-            Debug.Log($"I hit {hit.transform.name}");
+            //Debug.Log($"I hit {hit.transform.name}");
             //TODO: Add hit effect visual to help player notice hits
 
             EnemyHealth targetHealth = hit.transform.GetComponent<EnemyHealth>();
 
             if (targetHealth) {
+                //Debug.Log($"Dealing {weaponDamage} damage to target");
                 targetHealth.TakeDamage(weaponDamage);
             }
 

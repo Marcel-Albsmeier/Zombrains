@@ -12,19 +12,23 @@ public class EnemyHealth : MonoBehaviour{
 
     private void Awake() {
         currentHitPoints = hitPoints;
+        //Debug.Log(currentHitPoints + ";" + this.name);
     }
 
     
 
     public void TakeDamage(float damageAmount) {
+
+        //Debug.Log($"taking {damageAmount} damage");
         currentHitPoints -= damageAmount;
+        //Debug.Log($"I have {currentHitPoints} hp remaining");
 
         BroadcastMessage(DAMAGE_TAKEN_METHOD);
 
         
 
         if (currentHitPoints <= 0) {
-            Debug.Log("blargh I died");
+            //Debug.Log("blargh I died");
             gameObject.SetActive(false);
         }
 
