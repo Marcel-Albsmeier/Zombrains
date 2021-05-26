@@ -16,7 +16,7 @@ public class DeathHandler : MonoBehaviour{
     public void HandleDeath() {
         
         gameOverCanvas.enabled = true;
-        var fpc = GetComponent<FirstPersonController>();
+        var fpc = GetComponent<RigidbodyFirstPersonController>();
         fpc.enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

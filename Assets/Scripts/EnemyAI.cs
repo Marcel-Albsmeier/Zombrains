@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class EnemyAI : MonoBehaviour{
     //parameters
@@ -32,7 +33,7 @@ public class EnemyAI : MonoBehaviour{
     }
 
     private void Start() {
-        target = FindObjectOfType<CharacterController>().transform;
+        target = FindObjectOfType<RigidbodyFirstPersonController>().transform;
     }
 
     private void Update() {
