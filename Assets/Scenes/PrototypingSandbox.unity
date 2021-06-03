@@ -546,10 +546,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2535919619296446833, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: ammoSlot
-      value: 
-      objectReference: {fileID: 1467011456}
+    - target: {fileID: 945990487816008805, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2344207538435981213, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3653826276039915236, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -598,9 +602,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3915354614333435435, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: zoomSens
-      value: 1
+    - target: {fileID: 4634766586161759469, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5508406188455494646, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
       propertyPath: gameOverCanvas
@@ -3099,25 +3103,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: b9d7ac1a0f551404f8d32e1e02b64325, type: 3}
---- !u!1 &1467011455 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3653826276040338116, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-  m_PrefabInstance: {fileID: 195197952}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1467011456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1467011455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d1cde66879a7ee458f90d6377da8459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxAmmo: 20
-  currentAmmo: 10
 --- !u!1001 &1470839761
 PrefabInstance:
   m_ObjectHideFlags: 0
