@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.InputSystem;
 
 public class WeaponZoom : MonoBehaviour{
     // Start is called before the first frame update
@@ -12,6 +13,8 @@ public class WeaponZoom : MonoBehaviour{
     [SerializeField] float regularSens = 2f;
     [SerializeField] float zoomSens = 1f ;
 
+    [SerializeField] InputAction zoomToggleKey;
+
     //cached 
     RigidbodyFirstPersonController fpsController;
 
@@ -21,7 +24,7 @@ public class WeaponZoom : MonoBehaviour{
 
     bool zoomToggle = false;
     private void Update() {
-        if (Input.GetMouseButtonDown(1)) {
+        if (zoomToggleKey.triggered) {
             zoomToggle = !zoomToggle;
 
             if (zoomToggle) {
