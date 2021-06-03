@@ -14,6 +14,8 @@ public class Weapon : MonoBehaviour{
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitVFX;
 
+    [SerializeField] Ammo ammoSlot;
+
     private void Awake() {
         shootWeapon.Enable();
     }
@@ -24,12 +26,15 @@ public class Weapon : MonoBehaviour{
 
     void Update(){
         if (shootWeapon.triggered) {
-            Shoot();
+            if (ammoSlot.GetCurrentAmmoCount() > 0) {
+                Shoot();
+            }
         }
     }
 
     private void Shoot() {
         PlayMuzzleFlash();
+        ammoSlot.ReduceCurrentAmmo();
         ProcessRaycast();
 
     }
