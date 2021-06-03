@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6308281494270102705}
   - component: {fileID: 1239574405835301855}
+  - component: {fileID: 8293837108272263179}
   m_Layer: 0
   m_Name: AssaultRifle
   m_TagString: Untagged
@@ -67,6 +68,23 @@ MonoBehaviour:
   muzzleFlash: {fileID: 5389934567412871516}
   hitVFX: {fileID: 2691523582657059600, guid: 4f390bfb696f6fe43809b9e3ef74e423, type: 3}
   ammoSlot: {fileID: 0}
+--- !u!114 &8293837108272263179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306245261977859199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c59d643af34f3b44bbeb77dbbcee82d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsPlayerCamera: {fileID: 0}
+  defaultFOV: 60
+  zoomedInFOV: 50
+  regularSens: 2
+  zoomSens: 1.7
 --- !u!1 &6383968376267659932
 GameObject:
   m_ObjectHideFlags: 0
