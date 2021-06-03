@@ -13,8 +13,11 @@ public class Weapon : MonoBehaviour{
     [SerializeField] float weaponRange = 100f;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitVFX;
+    [SerializeField] float shotRecoveryTimer = 1f;
 
     [SerializeField] Ammo ammoSlot;
+
+    bool canShoot = true;
 
     private void Awake() {
         shootWeapon.Enable();
@@ -25,17 +28,24 @@ public class Weapon : MonoBehaviour{
     }
 
     void Update(){
-        if (shootWeapon.triggered) {
-            if (ammoSlot.GetCurrentAmmoCount() > 0) {
-                Shoot();
-            }
+        if (shootWeapon.triggered && canShoot) {
+            
+                StartCoroutine(Shoot());
+            
         }
     }
 
-    private void Shoot() {
-        PlayMuzzleFlash();
-        ammoSlot.ReduceCurrentAmmo();
-        ProcessRaycast();
+    private IEnumerator Shoot() {
+        
+        if (ammoSlot.GetCurrentAmmoCount() > 0) {
+            canShoot = false;
+            PlayMuzzleFlash();
+            ammoSlot.ReduceCurrentAmmo();
+            ProcessRaycast();
+        }
+            
+        yield return new WaitForSeconds(shotRecoveryTimer);
+        canShoot = true;
 
     }
 
