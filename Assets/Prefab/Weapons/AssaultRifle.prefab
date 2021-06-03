@@ -63,10 +63,11 @@ MonoBehaviour:
       m_Action: Shoot Weapon
       m_Flags: 0
   fpCamera: {fileID: 0}
-  weaponDamage: 25
-  weaponRange: 100
+  weaponDamage: 35
+  weaponRange: 120
   muzzleFlash: {fileID: 5389934567412871516}
   hitVFX: {fileID: 2691523582657059600, guid: 4f390bfb696f6fe43809b9e3ef74e423, type: 3}
+  shotRecoveryTimer: 0.1
   ammoSlot: {fileID: 0}
 --- !u!114 &8293837108272263179
 MonoBehaviour:
@@ -85,6 +86,22 @@ MonoBehaviour:
   zoomedInFOV: 50
   regularSens: 2
   zoomSens: 1.7
+  zoomToggleKey:
+    m_Name: Zoom Toggle Key
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9fb772d8-821a-4c67-805a-bbd98358742b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: c235628f-be88-4222-97f1-7a42b5c40038
+      m_Path: <Mouse>/rightButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Zoom Toggle Key
+      m_Flags: 0
 --- !u!1 &6383968376267659932
 GameObject:
   m_ObjectHideFlags: 0

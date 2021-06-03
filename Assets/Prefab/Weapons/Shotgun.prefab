@@ -62,10 +62,11 @@ MonoBehaviour:
       m_Action: Shoot Weapon
       m_Flags: 0
   fpCamera: {fileID: 0}
-  weaponDamage: 70
-  weaponRange: 20
+  weaponDamage: 100
+  weaponRange: 10
   muzzleFlash: {fileID: 5389934567412871516}
   hitVFX: {fileID: 2691523582657059600, guid: 4f390bfb696f6fe43809b9e3ef74e423, type: 3}
+  shotRecoveryTimer: 2
   ammoSlot: {fileID: 0}
 --- !u!1 &8503885842158853752
 GameObject:
