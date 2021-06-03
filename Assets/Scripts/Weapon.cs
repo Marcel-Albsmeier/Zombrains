@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour{
     //parameters
     [SerializeField] InputAction shootWeapon;
     [SerializeField] Camera fpCamera;
-    [SerializeField] float weaponDamage = 35f;
+    [SerializeField] float weaponDamage = 25f;
     [SerializeField] float weaponRange = 100f;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitVFX;
