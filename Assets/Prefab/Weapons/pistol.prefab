@@ -148,7 +148,7 @@ MonoBehaviour:
   weaponRange: 30
   muzzleFlash: {fileID: 4495216079498129207}
   hitVFX: {fileID: 2691523582657059600, guid: 4f390bfb696f6fe43809b9e3ef74e423, type: 3}
-  shotRecoveryTimer: 0.5
+  shotRecoveryTimer: 0.3
   ammoSlot: {fileID: 0}
 --- !u!1 &5236651146520084013
 GameObject:
