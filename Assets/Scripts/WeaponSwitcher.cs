@@ -17,6 +17,32 @@ public class WeaponSwitcher : MonoBehaviour{
         SetActiveWeapon();
     }
 
+    // Update is called once per frame
+    void Update() {
+        int lastWeaponIndex = currentWeaponIndex;
+
+        ProcessKeyInput();
+        //ProcessScrollWheel();
+
+        if (lastWeaponIndex != currentWeaponIndex) {
+            SetActiveWeapon();
+        }
+    }
+
+    private void ProcessScrollWheel() {
+        throw new NotImplementedException();
+    }
+
+    private void ProcessKeyInput() {
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            currentWeaponIndex = 0;
+        }else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            currentWeaponIndex = 1;
+        }else if (Input.GetKeyDown(KeyCode.Alpha3)) {
+            currentWeaponIndex = 2;
+        }
+    }
+
     private void SetActiveWeapon() {
         int weaponIndex = 0;
         List<GameObject> weapons = new List<GameObject>();
@@ -41,8 +67,5 @@ public class WeaponSwitcher : MonoBehaviour{
 
     }
 
-    // Update is called once per frame
-    void Update(){
-        
-    }
+
 }

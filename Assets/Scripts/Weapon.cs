@@ -27,9 +27,14 @@ public class Weapon : MonoBehaviour{
         shootWeapon.Disable();
     }
 
+    private void OnEnable() {
+        shootWeapon.Enable();
+    }
+
     void Update(){
+        //Debug.Log($"Can shoot is {canShoot}");
         if (shootWeapon.triggered && canShoot) {
-            
+            //Debug.Log("Shooting now");
                 StartCoroutine(Shoot());
             
         }
