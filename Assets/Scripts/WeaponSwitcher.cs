@@ -24,16 +24,10 @@ public class WeaponSwitcher : MonoBehaviour{
     }
 
     void Start(){
-        weaponCount = 0;
+        weaponCount = transform.childCount;
         SetActiveWeapon();
-        GetWeaponCount();
     }
 
-    private void GetWeaponCount() {
-       foreach (Transform weapon in transform) {
-            weaponCount++;
-        }
-    }
 
 
     // Update is called once per frame

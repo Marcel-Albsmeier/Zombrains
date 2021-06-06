@@ -29,6 +29,7 @@ public class Weapon : MonoBehaviour{
 
     private void OnEnable() {
         shootWeapon.Enable();
+        canShoot = true;
     }
 
     void Update(){
