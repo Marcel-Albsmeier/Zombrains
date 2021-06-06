@@ -24,9 +24,7 @@ public class WeaponZoom : MonoBehaviour{
 
     private void OnDisable() {
         zoomToggle = false;
-        fpsPlayerCamera.fieldOfView = defaultFOV;
-        fpsController.mouseLook.XSensitivity = regularSens;
-        fpsController.mouseLook.YSensitivity = regularSens;
+        ZoomOut();
         zoomToggleKey.Disable();
     }
 
@@ -40,14 +38,22 @@ public class WeaponZoom : MonoBehaviour{
             zoomToggle = !zoomToggle;
 
             if (zoomToggle) {
-                fpsPlayerCamera.fieldOfView = zoomedInFOV;
-                fpsController.mouseLook.XSensitivity = zoomSens;
-                fpsController.mouseLook.YSensitivity = zoomSens;
+                ZoomIn();
             } else {
-                fpsPlayerCamera.fieldOfView = defaultFOV;
-                fpsController.mouseLook.XSensitivity = regularSens;
-                fpsController.mouseLook.YSensitivity = regularSens;
+                ZoomOut();
             }
         }
+    }
+
+    private void ZoomOut() {
+        fpsPlayerCamera.fieldOfView = defaultFOV;
+        fpsController.mouseLook.XSensitivity = regularSens;
+        fpsController.mouseLook.YSensitivity = regularSens;
+    }
+
+    private void ZoomIn() {
+        fpsPlayerCamera.fieldOfView = zoomedInFOV;
+        fpsController.mouseLook.XSensitivity = zoomSens;
+        fpsController.mouseLook.YSensitivity = zoomSens;
     }
 }
