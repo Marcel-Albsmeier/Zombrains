@@ -546,18 +546,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1467011456, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: currentAmmo
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 945990487816008805, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2344207538435981213, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3653826276039915236, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -576,19 +564,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3653826276039915236, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.43468714
       objectReference: {fileID: 0}
     - target: {fileID: 3653826276039915236, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3653826276039915236, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.90058154
       objectReference: {fileID: 0}
     - target: {fileID: 3653826276039915236, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3653826276039915236, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -596,7 +584,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3653826276039915236, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 128.469
       objectReference: {fileID: 0}
     - target: {fileID: 3653826276039915236, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -606,118 +594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4634766586161759469, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5508406188455494646, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 724787381}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_Id
-      value: 35eb54d8-e629-49ac-aeb9-3e8ed52f0e97
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_Name
-      value: Scroll Wheel
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[0].m_Id
-      value: 3a333392-4952-474a-828a-4fda7fb93c6b
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[1].m_Id
-      value: 77ef4f64-0dd8-4e8f-8d9b-b4ceb9362457
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[2].m_Id
-      value: ff4f422a-a9c8-4009-b5dd-ba3d95a89556
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[3].m_Id
-      value: 9c6271e8-d4d2-4afd-b068-a10428938ab2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[4].m_Id
-      value: c9795965-81f8-4a35-a4b3-bc7ab7ede6c8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[0].m_Name
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Mouse>/scroll
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[1].m_Name
-      value: up
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[1].m_Path
-      value: <Mouse>/scroll/y
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[2].m_Name
-      value: down
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[2].m_Path
-      value: <Mouse>/scroll
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[3].m_Name
-      value: left
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[4].m_Name
-      value: right
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[0].m_Flags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[1].m_Flags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[2].m_Flags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[3].m_Flags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[4].m_Flags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Scroll Wheel
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[1].m_Action
-      value: Scroll Wheel
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[2].m_Action
-      value: Scroll Wheel
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[3].m_Action
-      value: Scroll Wheel
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880150960316481966, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
-      propertyPath: scrollWheel.m_SingletonActionBindings.Array.data[4].m_Action
-      value: Scroll Wheel
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 287f50c470fcf06438c96d3414e5c180, type: 3}
 --- !u!1 &196990005 stripped

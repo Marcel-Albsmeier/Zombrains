@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1cde66879a7ee458f90d6377da8459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoSlot:
+  ammoSlots:
   - ammoType: 0
     maxAmmoOfType: 40
     currentAmmoCount: 10
@@ -564,13 +564,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollWheel:
-    m_Name: 
+    m_Name: Scroll Wheel
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: 35eb54d8-e629-49ac-aeb9-3e8ed52f0e97
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 3a333392-4952-474a-828a-4fda7fb93c6b
+      m_Path: <Mouse>/scroll
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Scroll Wheel
+      m_Flags: 0
   currentWeaponIndex: 0
 --- !u!1001 &5621992178888974320
 PrefabInstance:

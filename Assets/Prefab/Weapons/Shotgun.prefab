@@ -68,6 +68,7 @@ MonoBehaviour:
   hitVFX: {fileID: 2691523582657059600, guid: 4f390bfb696f6fe43809b9e3ef74e423, type: 3}
   shotRecoveryTimer: 2
   ammoSlot: {fileID: 0}
+  ammoType: 1
 --- !u!1 &8503885842158853752
 GameObject:
   m_ObjectHideFlags: 0
