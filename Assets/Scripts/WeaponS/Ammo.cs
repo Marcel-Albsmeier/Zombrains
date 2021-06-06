@@ -38,4 +38,12 @@ public class Ammo : MonoBehaviour{
     public void ReduceCurrentAmmo(AmmoType ammoType) {
         GetAmmoSlot(ammoType).currentAmmoCount--;
     }
+
+    public void IncreaseCurrentAmmo(AmmoType ammoType, int ammount) {
+        var ammoSlot = GetAmmoSlot(ammoType);
+        ammoSlot.currentAmmoCount += ammount;
+        if (ammoSlot.currentAmmoCount > ammoSlot.maxAmmoOfType) {
+            ammoSlot.currentAmmoCount = ammoSlot.maxAmmoOfType;
+        }
+    }
 }
