@@ -355,8 +355,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1cde66879a7ee458f90d6377da8459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAmmo: 20
-  currentAmmo: 10
+  ammoSlot:
+  - ammoType: 0
+    maxAmmoOfType: 40
+    currentAmmoCount: 10
+  - ammoType: 1
+    maxAmmoOfType: 16
+    currentAmmoCount: 6
+  - ammoType: 2
+    maxAmmoOfType: 60
+    currentAmmoCount: 15
 --- !u!1 &3653826276040338118
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class Ammo : MonoBehaviour{
 
-    [SerializeField] int maxAmmo;
-    [SerializeField] int currentAmmo = 10;
-
-
-    public int GetCurrentAmmoCount() {
-        return currentAmmo;
+    //private class for AmmoSlots
+    [System.Serializable]
+    private class AmmoSlot {
+        public AmmoType ammoType;
+        public int maxAmmoOfType;
+        public int currentAmmoCount;
     }
 
-    public void ReduceCurrentAmmo(int amount) {
-        currentAmmo -= amount;
-    }
+    //parameters
+    [SerializeField] AmmoSlot[] ammoSlot;
 
-    public void ReduceCurrentAmmo() {
-        currentAmmo--;
-    }
+
+    //public int getcurrentammocount() {
+    //    return currentammo;
+    //}
+
+    //public void reducecurrentammo(int amount) {
+    //    currentammo -= amount;
+    //}
+
+    //public void reducecurrentammo() {
+    //    currentammo--;
+    //}
 }
