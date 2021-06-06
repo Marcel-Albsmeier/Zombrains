@@ -44,7 +44,7 @@ public class WeaponSwitcher : MonoBehaviour{
 
     private void ProcessScrollWheel() {
         float scrollInput = scrollWheel.ReadValue<Vector2>().y;
-        Debug.Log(scrollInput);
+        //Debug.Log(scrollInput);
         if (scrollInput > 0) {
             currentWeaponIndex--;
             if (currentWeaponIndex < 0 ) {

@@ -18,7 +18,19 @@ public class WeaponZoom : MonoBehaviour{
     //cached 
     RigidbodyFirstPersonController fpsController;
 
-    private void Start() {
+    private void OnEnable() {
+        zoomToggleKey.Enable();
+    }
+
+    private void OnDisable() {
+        zoomToggle = false;
+        fpsPlayerCamera.fieldOfView = defaultFOV;
+        fpsController.mouseLook.XSensitivity = regularSens;
+        fpsController.mouseLook.YSensitivity = regularSens;
+        zoomToggleKey.Disable();
+    }
+
+    private void Awake() {
         fpsController = GetComponentInParent<RigidbodyFirstPersonController>();
     }
 
