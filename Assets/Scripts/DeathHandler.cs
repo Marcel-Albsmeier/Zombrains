@@ -20,6 +20,7 @@ public class DeathHandler : MonoBehaviour{
         fpc.enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        FindObjectOfType<WeaponSwitcher>().enabled = false;
         Time.timeScale = 0;
 
     }
