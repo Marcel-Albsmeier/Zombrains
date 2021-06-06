@@ -16,6 +16,7 @@ public class Weapon : MonoBehaviour{
     [SerializeField] float shotRecoveryTimer = 1f;
 
     [SerializeField] Ammo ammoSlot;
+    [SerializeField] AmmoType ammoType;
 
     bool canShoot = true;
 
@@ -32,24 +33,24 @@ public class Weapon : MonoBehaviour{
         canShoot = true;
     }
 
-    void Update(){
+    void Update() {
         //Debug.Log($"Can shoot is {canShoot}");
         if (shootWeapon.triggered && canShoot) {
             //Debug.Log("Shooting now");
-                StartCoroutine(Shoot());
-            
+            StartCoroutine(Shoot());
+
         }
     }
 
     private IEnumerator Shoot() {
-        
-        if (ammoSlot.GetCurrentAmmoCount() > 0) {
+
+        if (ammoSlot.GetCurrentAmmoCount(ammoType) > 0) {
             canShoot = false;
             PlayMuzzleFlash();
-            ammoSlot.ReduceCurrentAmmo();
+            ammoSlot.ReduceCurrentAmmo(ammoType);
             ProcessRaycast();
         }
-            
+
         yield return new WaitForSeconds(shotRecoveryTimer);
         canShoot = true;
 
