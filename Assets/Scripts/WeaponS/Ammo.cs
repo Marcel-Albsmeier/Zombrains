@@ -31,19 +31,25 @@ public class Ammo : MonoBehaviour{
         return null;
     }
 
-    public void ReduceCurrentAmmo(AmmoType ammoType, int amount) {
+    public bool ReduceCurrentAmmo(AmmoType ammoType, int amount) {
         GetAmmoSlot(ammoType).currentAmmoCount -= amount;
+        return true;
     }
 
     public void ReduceCurrentAmmo(AmmoType ammoType) {
         GetAmmoSlot(ammoType).currentAmmoCount--;
     }
 
-    public void IncreaseCurrentAmmo(AmmoType ammoType, int ammount) {
+    public bool IncreaseCurrentAmmo(AmmoType ammoType, int ammount) {
+
         var ammoSlot = GetAmmoSlot(ammoType);
+        if (ammoSlot.currentAmmoCount == ammoSlot.maxAmmoOfType) {
+            return false;
+        }
         ammoSlot.currentAmmoCount += ammount;
         if (ammoSlot.currentAmmoCount > ammoSlot.maxAmmoOfType) {
             ammoSlot.currentAmmoCount = ammoSlot.maxAmmoOfType;
         }
+        return true;
     }
 }

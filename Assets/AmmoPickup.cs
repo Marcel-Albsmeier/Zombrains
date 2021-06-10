@@ -16,8 +16,10 @@ public class AmmoPickup : MonoBehaviour{
             return;
         }
 
-        FindObjectOfType<Ammo>().IncreaseCurrentAmmo(ammoType, ammoAmount);
-
-        Destroy(gameObject);
+        var pickedUp = FindObjectOfType<Ammo>().IncreaseCurrentAmmo(ammoType, ammoAmount);
+        if (pickedUp) {
+            Destroy(gameObject);
+        }
+        
     }
 }
