@@ -60,6 +60,8 @@ public class EnemyAI : MonoBehaviour{
             isProvoked = false;
             navMeshAgent.SetDestination(transform.position);
             animator.SetTrigger(IDLE_TRIGGER);
+            animator.ResetTrigger(CHASE_TRIGGER);
+           // Debug.Log(animator.);
             Debug.Log($"{name} has calmed down and stopped chasing");
         }
     }
