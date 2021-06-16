@@ -6,9 +6,11 @@ public class EnemyHealth : MonoBehaviour{
     //parameters
     [SerializeField] float hitPoints = 100f;
     static string DAMAGE_TAKEN_METHOD = "OnDamageTaken";
+    static string DEATH_HANDLING_METHOD = "OnDeath";
 
     //states
     float currentHitPoints;
+    bool isDead;
 
     private void Awake() {
         currentHitPoints = hitPoints;
@@ -18,6 +20,10 @@ public class EnemyHealth : MonoBehaviour{
     
 
     public void TakeDamage(float damageAmount) {
+
+        if (isDead) {
+            return;
+        }
 
         //Debug.Log($"taking {damageAmount} damage");
         currentHitPoints -= damageAmount;
@@ -29,7 +35,9 @@ public class EnemyHealth : MonoBehaviour{
 
         if (currentHitPoints <= 0) {
             //Debug.Log("blargh I died");
-            gameObject.SetActive(false);
+            BroadcastMessage(DEATH_HANDLING_METHOD);
+            isDead = true;
+
         }
 
     }

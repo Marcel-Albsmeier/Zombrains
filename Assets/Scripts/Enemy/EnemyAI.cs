@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour{
     const string CHASE_TRIGGER = "move";
     const string IDLE_TRIGGER = "idle";
     const string ATTACK_STATE = "attack";
+    const string DEATH_TRIGGER = "death";
 
 
     //cached
@@ -26,6 +27,7 @@ public class EnemyAI : MonoBehaviour{
     //states
     bool isProvoked = false;
     float playerGoneTimer;
+    bool dead = false;
 
     private void Awake() {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -37,6 +39,10 @@ public class EnemyAI : MonoBehaviour{
     }
 
     private void Update() {
+
+        if (dead) {
+            return;
+        }
 
         distanceToTarget = Vector3.Distance(target.position, transform.position);
 
@@ -82,6 +88,14 @@ public class EnemyAI : MonoBehaviour{
     public void OnDamageTaken() {
         isProvoked = true;
         playerGoneTimer = 0f ;
+    }
+
+    public void OnDeath() {
+        dead = true;
+        navMeshAgent.enabled = false;
+        animator.SetTrigger(DEATH_TRIGGER);
+        animator.ResetTrigger(CHASE_TRIGGER);
+        animator.ResetTrigger(IDLE_TRIGGER);
     }
 
 
