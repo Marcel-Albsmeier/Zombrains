@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1293092616
 Transform:
   m_ObjectHideFlags: 0
@@ -135,12 +135,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 3653826276038306020}
   movementSettings:
-    ForwardSpeed: 10
-    BackwardSpeed: 10
-    StrafeSpeed: 10
-    RunMultiplier: 2
+    ForwardSpeed: 7
+    BackwardSpeed: 7
+    StrafeSpeed: 7
+    RunMultiplier: 1.5
     RunKey: 304
-    JumpForce: 70
+    JumpForce: 60
     SlopeCurveModifier:
       serializedVersion: 2
       m_Curve:
