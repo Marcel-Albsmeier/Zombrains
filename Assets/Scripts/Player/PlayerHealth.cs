@@ -17,6 +17,8 @@ public class PlayerHealth : MonoBehaviour{
 
     public bool TakeDamage(float amount) {
         currentHitPoints -= amount;
+        GetComponent<DisplayDamage>().DisplayDamageImpact();
+
 
         if (currentHitPoints <= 0) {
             Debug.Log("He's bread jim.");
