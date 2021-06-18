@@ -364,8 +364,8 @@ MonoBehaviour:
     maxAmmoOfType: 16
     currentAmmoCount: 6
   - ammoType: 2
-    maxAmmoOfType: 60
-    currentAmmoCount: 15
+    maxAmmoOfType: 120
+    currentAmmoCount: 20
 --- !u!114 &1136349082
 MonoBehaviour:
   m_ObjectHideFlags: 0
