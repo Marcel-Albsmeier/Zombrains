@@ -6,13 +6,18 @@ using UnityEngine;
 public class DisplayDamage : MonoBehaviour{
 
     //parameters
-    [SerializeField] float impactTime = 0.2f;
+    [SerializeField] float impactTime = 0.1f;
 
     //cached references
     [SerializeField] Canvas impactCanvas;
 
     // Start is called before the first frame update
     void Start(){
+        impactCanvas.enabled = false;
+    }
+
+    public void HideImage() {
+        StopAllCoroutines();
         impactCanvas.enabled = false;
     }
 

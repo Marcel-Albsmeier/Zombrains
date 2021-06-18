@@ -22,6 +22,7 @@ public class PlayerHealth : MonoBehaviour{
 
         if (currentHitPoints <= 0) {
             Debug.Log("He's bread jim.");
+            GetComponent<DisplayDamage>().HideImage();
             GetComponent<DeathHandler>().HandleDeath();
             Debug.Log(Cursor.lockState);
             Debug.Log(Cursor.visible);
