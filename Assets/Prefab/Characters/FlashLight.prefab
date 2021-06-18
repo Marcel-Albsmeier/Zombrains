@@ -44,7 +44,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.9211942, b: 0.48584908, a: 1}
-  m_Intensity: 5
+  m_Intensity: 3
   m_Range: 25
   m_SpotAngle: 65
   m_InnerSpotAngle: 4
@@ -106,6 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88879aa9cb986ba43bdbd794d074dc28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightIntensitiyDecayRate: 0.1
-  lightAngleDecayRate: 0.4
+  lightIntensitiyDecayRate: 0.05
+  lightAngleDecayRate: 0.2
   lightAngleMinimumValue: 15
